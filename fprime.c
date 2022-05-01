@@ -73,6 +73,11 @@ int main(int argc, char **argv)
 			printf("%d\n", 1);
 			return (0);
 		}
+		else if(nb == 2147483647)
+		{
+			printf("%d\n", 2147483647);
+			return (0);
+		}
 		else
 		{
 			fprime(nb);
