@@ -34,17 +34,50 @@ $> ./fprime 42 21 | cat -e
 $
  */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+void	fprime(int nb)
+{
+	int i = 2;
+	while (i <= nb)
+	{
+		while (nb % i == 0)
+		{
+			printf("%d", i);
+			if (nb != i)
+				printf("*");
+			nb /= i;
+		}
+		i++;
+	}
+}
 
 int main(int argc, char **argv)
 {
 	if (argc != 2)
 	{
-		write(1, "\n", 1);
+		printf("\n");
+		return (0);
 	}
 	else
 	{
-		write(1, "hello", 5);
+		int nb = atoi(argv[1]);
+		if (nb < 1)
+		{
+			printf("\n");
+			return (0);
+		}
+		else if (nb == 1)
+		{
+			printf("%d\n", 1);
+			return (0);
+		}
+		else
+		{
+			fprime(nb);
+			printf("\n");
+		}
 	}
-	argv[1];
+	return (0);
 }
