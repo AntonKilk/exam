@@ -49,8 +49,8 @@ void	print_tab(char **area)
 int main(void)
 {
 	char **area;
-	t_point size = { 8, 6 };
-	t_point begin = { 2, 2};
+	t_point size = { 7, 7 };
+	t_point begin = { 0, 0 };
 	char *zone[] = {
 		"aaaaaaa",
 		"aabbbaa",

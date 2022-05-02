@@ -12,9 +12,9 @@ void fill_recursion(char **tab, t_point size, t_point b, char fill)
 	point[3].x = b.x;
 	point[3].y = b.y - 1;
 
-	if (b.x >= 0 && b.y >= 0 && b.x <= size.x &&  b.y <= size.y)
+	if (b.x >= 0 && b.y >= 0 && b.x < size.x &&  b.y < size.y)
 	{
-		if (tab[b.y][b.x] == 'F' || tab[b.y][b.x] != fill)
+		if (tab[b.y][b.x] != fill)
 			return ;
 		else
 		{

@@ -6,5 +6,11 @@ typedef struct 	s_point {
     int 		y;				// y : Height | y-axis
 } 				t_point;
 
+/* Try same but with list */
+// typedef struct 	s_list {
+//     void 		*content;
+//     struct s_list   *next;
+// } 				t_list;
+
 #endif
 
