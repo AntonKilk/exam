@@ -26,9 +26,9 @@ void  flood_fill(char **tab, t_point size, t_point begin);
 char	**make_area(char **zone)
 {
 	char **area;
-	area = (char **)malloc(sizeof (char *) * 5);
+	area = (char **)malloc(sizeof (char *) * 7);
 	int i = 0;
-	while (i < 5)
+	while (i < 7)
 	{
 		area[i] = strdup(zone[i]);
 		i++;
@@ -39,7 +39,7 @@ char	**make_area(char **zone)
 void	print_tab(char **area)
 {
 	int i = 0;
-	while (i < 5)
+	while (i < 7)
 	{
 		printf("%s\n", area[i]);
 		i++;
@@ -49,14 +49,16 @@ void	print_tab(char **area)
 int main(void)
 {
 	char **area;
-	t_point size = { 8, 5 };
-	t_point begin = { 2, 2 };
+	t_point size = { 8, 6 };
+	t_point begin = { 2, 2};
 	char *zone[] = {
-		"11111111",
-		"10001001",
-		"10010001",
-		"10110001",
-		"11100001"
+		"aaaaaaa",
+		"aabbbaa",
+		"abaaaba",
+		"abaaaba",
+		"abaaaba",
+		"aabbbaa",
+		"aaaaaaa"
 	};
 
 	area = make_area(zone);
